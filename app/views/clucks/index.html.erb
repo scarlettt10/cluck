@@ -1,0 +1,15 @@
+<h1>Cluckers</h1>
+<%= link_to 'New Clucks', new_cluck_path %>
+<hr />
+<% @clucks.each do |cluck| %>
+  <div>
+    <h3>
+      <%= link_to cluck.user, cluck_path(cluck) %>
+    </h3>
+    <i>User: <%= cluck.user %></i>
+   
+    <%= link_to 'Edit', edit_cluck_path(cluck) %> 
+    <%= link_to 'Delete', cluck_path(cluck), method: :delete %>
+  </div>
+  <hr />
+<% end %>

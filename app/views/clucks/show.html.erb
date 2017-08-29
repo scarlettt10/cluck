@@ -1,0 +1,13 @@
+<h1>
+<%= @cluck.user %>
+</h1>
+
+<i>Author: <%= @cluck.user %> </i>
+<br />
+<i>Interest: <%= @cluck.interest %> </i>
+
+<hr />
+
+<%= link_to 'Edit', edit_cluck_path(@cluck) %>
+<%= link_to 'Back', clucks_path %>
+

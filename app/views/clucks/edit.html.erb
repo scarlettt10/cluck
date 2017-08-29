@@ -1,0 +1,19 @@
+<h1>
+I Clucked Up
+<%= @cluck.user %>
+</h1>
+
+<%= form_for @cluck do |f| %>
+  <div>  
+    <%= f.label :user %>
+    <%= f.text_field :user, placeholder: 'User', required: true %>
+  </div>
+
+  <div>
+    <%= f.label :interest %>
+    <%= f.text_field :interest, placeholder: 'Interest', required: true  %>
+  </div>
+
+
+  <%= f.submit %>
+<% end %>
